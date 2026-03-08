@@ -59,11 +59,3 @@ Email: julioakadio@gmail.com
 GitHub: github.com/Akadioo
 
 
-### Notas para tu perfil:
-* **Confianza:** Al detallar que usas **pnpm** y **TypeScript**, demuestras que estás al tanto de las herramientas que usan las empresas hoy en día[cite: 45].
-* **Enfoque:** Este README no menciona trabajos universitarios, presentándolo como una herramienta de marketing profesional para tu carrera[cite: 4, 6].
-
-Una vez guardado, sube los cambios con:
-`git add README.md`
-`git commit -m "Actualizar README con perfil profesional"`
-`git push`
