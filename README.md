@@ -1,42 +1,69 @@
-# sv
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" width="80" alt="Svelte Logo" />
+</p>
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+<h1 align="center">Mi Portafolio Profesional</h1>
 
-## Creating a project
+<p align="center">
+  <strong>Desarrollado por Julio López</strong><br>
+  <em>Analista Programador | Backend & Frontend Developer</em>
+</p>
 
-If you're seeing this, you've probably already done this step. Congrats!
+---
 
-```sh
-# create a new project
-npx sv create my-app
-```
+## 🚀 Sobre este proyecto
 
-To recreate this project with the same configuration:
+Bienvenido al repositorio de mi **Portafolio Personal**. [cite_start]Este sitio ha sido diseñado y programado desde cero por mí para mostrar mi trayectoria profesional, mis habilidades técnicas y los proyectos reales que he desarrollado como **Analista Programador**[cite: 1, 13]. 
 
-```sh
-# recreate this project
-npx sv@0.12.5 create --template minimal --types ts --install npm portfolio
-```
+[cite_start]El objetivo de este sitio es ofrecer una experiencia de usuario fluida, moderna y responsiva, sirviendo como una muestra tangible de mis capacidades en el desarrollo de software[cite: 4, 69].
 
-## Developing
+## 🛠️ Stack Tecnológico
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Para la construcción de este portafolio utilicé tecnologías modernas de alto rendimiento:
 
-```sh
-npm run dev
+* [cite_start]**Framework:** [SvelteKit](https://kit.svelte.dev/) - Aprovechando el renderizado en el lado del servidor (SSR) y la reactividad eficiente[cite: 32, 47].
+* **Estilos:** [Tailwind CSS](https://tailwindcss.com/) - Para un diseño cromado, moderno y completamente responsivo.
+* [cite_start]**Lenguaje:** [TypeScript](https://www.typescriptlang.org/) - Garantizando un código robusto y tipado[cite: 33, 45].
+* **Gestor de paquetes:** [pnpm](https://pnpm.io/) - Para una gestión de dependencias rápida y eficiente.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## ⚙️ Configuración Local
 
-## Building
+Si deseas ejecutar este proyecto en tu entorno local para revisar el código, sigue estos pasos:
 
-To create a production version of your app:
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/Akadioo/Portfolio-Julio-Lopez.git](https://github.com/Akadioo/Portfolio-Julio-Lopez.git)
+Instalar dependencias:
 
-```sh
-npm run build
-```
+Bash
+pnpm install
+Iniciar servidor de desarrollo:
 
-You can preview the production build with `npm run preview`.
+Bash
+pnpm run dev
+📈 Características Destacadas
+Arquitectura Modular: Separación clara de componentes para una fácil mantenibilidad.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Modales Interactivos: Implementación de ventanas emergentes para detalles de proyectos y contacto dinámico.
+
+Diseño Optimizado: Enfoque en la accesibilidad (a11y) y tiempos de carga mínimos.
+
+✉️ Contacto
+Estoy en búsqueda de mi primera oportunidad profesional para aportar mi compromiso y capacidad de aprendizaje a un equipo de TI.
+
+LinkedIn: linkedin.com/in/julio-lopez-3b5482244/
+
+
+Email: julioakadio@gmail.com 
+
+GitHub: github.com/Akadioo
+
+
+### Notas para tu perfil:
+* **Confianza:** Al detallar que usas **pnpm** y **TypeScript**, demuestras que estás al tanto de las herramientas que usan las empresas hoy en día[cite: 45].
+* **Enfoque:** Este README no menciona trabajos universitarios, presentándolo como una herramienta de marketing profesional para tu carrera[cite: 4, 6].
+
+Una vez guardado, sube los cambios con:
+`git add README.md`
+`git commit -m "Actualizar README con perfil profesional"`
+`git push`
