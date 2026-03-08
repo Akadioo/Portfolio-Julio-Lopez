@@ -38,6 +38,16 @@
             links: [
                 { label: "VER CÓDIGO FUENTE", url: "https://github.com/Akadioo/Vetmongo" }
             ]
+        },
+        portfolio: {
+            title: "Portafolio Profesional",
+            subtitle: "Desarrollo Personal",
+            description: "Diseño y desarrollo de mi sitio web personal utilizando SvelteKit y Tailwind CSS. El proyecto implementa una arquitectura modular de componentes, modales interactivos para detalles de proyectos y un diseño responsivo con estética cromada moderna. Está optimizado para el rendimiento y la accesibilidad, sirviendo como muestra tangible de mis capacidades técnicas como Analista Programador y mi dominio de las tecnologías frontend actuales.",
+            tags: ["SVELTEKIT", "TAILWIND CSS", "TYPESCRIPT", "ARQUITECTURA MODULAR"],
+            image: "/imagenes/perfil.jpg", // Puedes cambiar esto por una captura de la web si quieres
+            links: [
+                { label: "VER CÓDIGO FUENTE", url: "https://github.com/Akadioo/Portfolio-Julio-Lopez" }
+            ]
         }
     };
 
@@ -65,7 +75,7 @@
             </p>
         </div>
 
-        <div class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mx-auto">
             
             <div 
                 role="button" 
@@ -83,7 +93,7 @@
                     <span class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-2 drop-shadow-[0_0_5px_rgba(147,51,234,0.5)]">E-commerce / Freelance</span>
                     <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">MangaNoStore</h3>
                     <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
-                        Catálogo digital con panel administrativo personalizado. Arquitectura desacoplada integrando APIs y separación de servicios.
+                        Catálogo digital con panel administrativo personalizado. Arquitectura desacoplada integrando APIs.
                     </p>
                     <div class="flex flex-wrap items-center gap-2 mt-auto">
                         <span class="px-2 py-1 rounded bg-purple-500/10 border border-purple-500/20 text-[10px] font-semibold text-purple-300">VER DETALLES →</span>
@@ -107,10 +117,34 @@
                     <span class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2 drop-shadow-[0_0_5px_rgba(59,130,246,0.5)]">Salud & Gestión</span>
                     <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">Vetmongo</h3>
                     <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
-                        Sistema de gestión clínica. Control de historiales médicos, pacientes y agenda veterinaria con base de datos documental.
+                        Sistema de gestión clínica para centros veterinarios con base de datos documental MongoDB.
                     </p>
                     <div class="flex flex-wrap items-center gap-2 mt-auto">
                         <span class="px-2 py-1 rounded bg-blue-500/10 border border-blue-500/20 text-[10px] font-semibold text-blue-300">VER DETALLES →</span>
+                    </div>
+                </div>
+            </div>
+
+            <div 
+                role="button" 
+                tabindex="0" 
+                on:click={() => openModal('portfolio')} 
+                on:keydown={(e) => handleKeydown(e, 'portfolio')}
+                class="glass card-hover group flex flex-col rounded-3xl overflow-hidden h-full border border-purple-500/10 hover:border-purple-500/40 cursor-pointer outline-none focus:ring-2 focus:ring-purple-500/50"
+            >
+                <div class="h-56 flex items-center justify-center relative overflow-hidden border-b border-purple-500/20">
+                    <div class="absolute inset-0 bg-purple-500/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500 z-10"></div>
+                    <img src="/imagenes/perfil.jpg" alt="Portafolio Profesional" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                </div>
+
+                <div class="p-8 flex flex-col flex-grow bg-gradient-to-b from-[#0a0a1a]/50 to-transparent">
+                    <span class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-2 drop-shadow-[0_0_5px_rgba(147,51,234,0.5)]">Desarrollo Personal</span>
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">Mi Portafolio</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                        Sitio web profesional desarrollado con SvelteKit y Tailwind CSS. Arquitectura modular y responsiva.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-2 mt-auto">
+                        <span class="px-2 py-1 rounded bg-purple-500/10 border border-purple-500/20 text-[10px] font-semibold text-purple-300">VER DETALLES →</span>
                     </div>
                 </div>
             </div>
