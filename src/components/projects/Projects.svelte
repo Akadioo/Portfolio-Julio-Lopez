@@ -1,5 +1,7 @@
 <script lang="ts">
-    // Definimos la estructura para soportar múltiples enlaces por proyecto
+    // 1. IMPORTANTE: Importamos 'base' para que las rutas no se rompan en GitHub
+    import { base } from '$app/paths';
+
     interface ProjectLink {
         label: string;
         url: string;
@@ -22,7 +24,8 @@
             subtitle: "Desarrollador Web Full Stack (Proyecto Freelance)",
             description: "Plataforma web tipo catálogo digital desarrollada para Astralis Group. Implementada con una arquitectura full stack separando servicios (Frontend en SvelteKit, Backend en NestJS con Fastify). Apliqué principios de Arquitectura Hexagonal y DDD para la comunicación entre repositorios mediante APIs. Destaca el diseño y desarrollo de un panel de administración personalizado para que el cliente gestione fácilmente productos, contenido visual y configuraciones, automatizando los procesos administrativos y reduciendo el tiempo de mantenimiento del sitio.",
             tags: ["NESTJS", "FASTIFY", "SVELTEKIT", "ARQUITECTURA HEXAGONAL"],
-            image: "/imagenes/mangaweb.jpg",
+            // 2. Quitamos la barra inicial para concatenar con {base} más abajo
+            image: "imagenes/mangaweb.jpg", 
             links: [
                 { label: "FRONTEND", url: "https://github.com/Akadioo/Manga-web-Fronend" },
                 { label: "CRUD BACKEND", url: "https://github.com/Akadioo/Manga-crud-backend" },
@@ -34,7 +37,7 @@
             subtitle: "Sistema de Salud & Gestión",
             description: "Sistema integral de gestión clínica diseñado para centros veterinarios. Construido para manejar de forma eficiente el control de historiales médicos, registro detallado de pacientes y agenda de citas. Utiliza MongoDB como base de datos documental para flexibilizar la estructura de los datos clínicos. La plataforma centraliza la información, facilitando el acceso rápido a diagnósticos y tratamientos, optimizando el flujo de trabajo diario del personal administrativo y médico bajo estándares de seguridad.",
             tags: ["NESTJS", "MONGODB", "SVELTE", "API REST"],
-            image: "/imagenes/vetmongo.jpg",
+            image: "imagenes/vetmongo.jpg",
             links: [
                 { label: "VER CÓDIGO FUENTE", url: "https://github.com/Akadioo/Vetmongo" }
             ]
@@ -44,7 +47,7 @@
             subtitle: "Desarrollo Personal",
             description: "Diseño y desarrollo de mi sitio web personal utilizando SvelteKit y Tailwind CSS. El proyecto implementa una arquitectura modular de componentes, modales interactivos para detalles de proyectos y un diseño responsivo con estética cromada moderna. Está optimizado para el rendimiento y la accesibilidad, sirviendo como muestra tangible de mis capacidades técnicas como Analista Programador y mi dominio de las tecnologías frontend actuales.",
             tags: ["SVELTEKIT", "TAILWIND CSS", "TYPESCRIPT", "ARQUITECTURA MODULAR"],
-            image: "/imagenes/perfil.jpg", // Puedes cambiar esto por una captura de la web si quieres
+            image: "imagenes/perfil.jpg",
             links: [
                 { label: "VER CÓDIGO FUENTE", url: "https://github.com/Akadioo/Portfolio-Julio-Lopez" }
             ]
@@ -86,7 +89,7 @@
             >
                 <div class="h-56 flex items-center justify-center relative overflow-hidden group-hover:bg-[#0f0f2a] transition-colors duration-500 border-b border-purple-500/20">
                     <div class="absolute inset-0 bg-purple-500/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500 z-10"></div>
-                    <img src="/imagenes/mangaweb.jpg" alt="MangaNoStore" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <img src="{base}/imagenes/mangaweb.jpg" alt="MangaNoStore" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                 </div>
 
                 <div class="p-8 flex flex-col flex-grow bg-gradient-to-b from-[#0a0a1a]/50 to-transparent">
@@ -110,7 +113,7 @@
             >
                 <div class="h-56 flex items-center justify-center relative overflow-hidden border-b border-blue-500/20">
                     <div class="absolute inset-0 bg-blue-500/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500 z-10"></div>
-                    <img src="/imagenes/vetmongo.jpg" alt="Vetmongo" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <img src="{base}/imagenes/vetmongo.jpg" alt="Vetmongo" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                 </div>
 
                 <div class="p-8 flex flex-col flex-grow bg-gradient-to-b from-[#0a0a1a]/50 to-transparent">
@@ -134,7 +137,7 @@
             >
                 <div class="h-56 flex items-center justify-center relative overflow-hidden border-b border-purple-500/20">
                     <div class="absolute inset-0 bg-purple-500/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500 z-10"></div>
-                    <img src="/imagenes/perfil.jpg" alt="Portafolio Profesional" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <img src="{base}/imagenes/perfil.jpg" alt="Portafolio Profesional" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                 </div>
 
                 <div class="p-8 flex flex-col flex-grow bg-gradient-to-b from-[#0a0a1a]/50 to-transparent">
@@ -161,7 +164,7 @@
             {#if selectedProject.image}
                 <div class="w-full h-48 sm:h-64 rounded-xl overflow-hidden mb-6 border border-white/10 relative">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a1a] to-transparent z-10 opacity-60"></div>
-                    <img src={selectedProject.image} alt={selectedProject.title} class="w-full h-full object-cover">
+                    <img src="{base}/{selectedProject.image}" alt={selectedProject.title} class="w-full h-full object-cover">
                 </div>
             {/if}
 
