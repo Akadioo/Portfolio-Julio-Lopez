@@ -1,4 +1,6 @@
 <script>
+    
+    import { base } from '$app/paths';
     export let openContact;
 </script>
 
@@ -12,7 +14,7 @@
                 <div class="absolute -inset-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl blur opacity-20 group-hover:opacity-50 transition duration-700"></div>
                 <div class="glass rounded-2xl p-2 relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] overflow-hidden border border-purple-500/20 group-hover:border-purple-500/50 transition-colors">
                     
-                    <img src="/imagenes/perfil.jpg" alt="Foto de Perfil" class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
+                    <img src="{base}/imagenes/perfil.jpg" alt="Foto de Perfil" class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
                     
                     <div class="absolute bottom-6 left-6 right-6">
                         <div class="bg-[#050510]/90 backdrop-blur-md border border-purple-500/30 p-4 rounded-xl flex items-center justify-between shadow-xl">
