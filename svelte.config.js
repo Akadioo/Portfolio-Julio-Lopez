@@ -1,14 +1,13 @@
-import adapter from '@sveltejs/adapter-static'; // Cambia 'auto' por 'static'
+import adapter from '@sveltejs/adapter-static'; 
 
 export default {
   kit: {
     adapter: adapter({
-      fallback: '404.html' // Recomendado para evitar errores al recargar
+      fallback: '404.html' 
     }),
     paths: {
-      // IMPORTANTE: Pon aquí el nombre de tu repositorio entre barras
-      base: process.env.NODE_ENV === 'production' ? '/nombre-de-tu-repo' : '',
+      // Aquí ponemos el nombre exacto de tu repo
+      base: process.env.NODE_ENV === 'production' ? '/Portfolio-Julio-Lopez' : '',
     }
   }
 };
-
