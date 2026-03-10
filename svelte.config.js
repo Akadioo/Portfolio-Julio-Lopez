@@ -1,13 +1,14 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static'; // Cambia 'auto' por 'static'
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	kit: {
-		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
-		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
-		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
-		adapter: adapter()
-	}
+export default {
+  kit: {
+    adapter: adapter({
+      fallback: '404.html' // Recomendado para evitar errores al recargar
+    }),
+    paths: {
+      // IMPORTANTE: Pon aquí el nombre de tu repositorio entre barras
+      base: process.env.NODE_ENV === 'production' ? '/nombre-de-tu-repo' : '',
+    }
+  }
 };
 
-export default config;
